@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solicitar valores</title>
+</head>
+<body>
+	<h1>Convertidor de moneda</h1>
+	<form method="post" action="{{ url_for('redirigir_a_ruta') }}">
+		<label>Cantidad:</label>
+		<input type="number" name="cantidad"><br>
+		<label>Moneda origen:</label>
+		<input type="text" name="moneda_origen"><br>
+		<label>Moneda destino:</label>
+		<input type="text" name="moneda_destino"><br>
+		<input type="submit" value="Convertir">
+	</form>
+</body>
+</html>

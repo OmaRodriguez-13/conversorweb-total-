@@ -1,5 +1,5 @@
 import mysql.connector
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -7,15 +7,13 @@ app = Flask(__name__)
 def index():
     return 'Bienvenido a la conversión de monedas'
 
-
-
 @app.route('/convertir/<float:cantidad>/<de_moneda>/<a_moneda>')
 def convertir(cantidad, de_moneda, a_moneda):
     # Conectarse a la base de datos
     conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="tu_contrasena", 
+    password="MalaMedicina5", 
     database="conversiones"
     )
 
